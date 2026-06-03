@@ -14,27 +14,33 @@ app = Flask(__name__)
 def home():
     return {"message" : "Welcome to flask 🌸"}
 
-# CREATE 
+# CREATE ✚
 @app.route("/todo/create", methods=["POST"])
 def createTodo():
     return {"message" : "Todo create success ✚"}
 
-# READ 
+# READ 👀 
 @app.route("/todos", methods=["GET"])
 def readTodo():
-    return {"message" : "Todo readTodo success 👀"}
+    return {"message" : "Todo read success 👀"}
 
 
-# UPDATE 
+# UPDATE  ✏️
 @app.route("/todo/update", methods=["PUT"])
 def updateTodo():
     return {"message" : "Todo update success ✏️"}
 
 
-# DELETE 
+# DELETE ❌
 @app.route("/todo/remove", methods=["DELETE"])
 def deleteTodo():
     return {"message" : "Todo delete success ❌"}
+
+
+# Get Me 🙍🏻‍♀️
+@app.route("/me", methods=["GET"])
+def me():
+    return {"name" : "Kirti Shinde", "role": "admin"}
 
 
 # -----------------
